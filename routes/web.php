@@ -17,21 +17,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
 
-Route::get('/app', function () {
-    return view('app.app');
-});
 
+Route::get('/logoutuser', 'UserController@logout');
+
+Route::get('/logoutadmin', 'Admin\UserController@logout');
 
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::GET('admin/home','AdminController@index');
+// Route::GET('admin/home','AdminController@index');
 
 Route::GET('admin','Admin\LoginController@showLoginForm')->name('admin.login');
 Route::POST('admin','Admin\LoginController@login');
@@ -41,6 +38,13 @@ Route::POST('admin-password/reset','Admin\ResetPasswordController@reset');
 Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
 
 
+Route::get('admin/dashboard', function () {
+    return view('admin.admin');
+});
+
+Route::get('/app', function () {
+    return view('app.app');
+});
 
 
 

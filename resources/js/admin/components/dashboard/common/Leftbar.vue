@@ -62,7 +62,7 @@
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block href="/logoutuser">Logout</v-btn>
+          <v-btn block href="/logoutadmin">Logout</v-btn>
         </div>
       </template>
     </v-navigation-drawer>

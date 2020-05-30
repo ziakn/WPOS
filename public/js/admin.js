@@ -20459,7 +20459,7 @@ var render = function() {
                     [
                       _c(
                         "v-btn",
-                        { attrs: { block: "", href: "/logoutuser" } },
+                        { attrs: { block: "", href: "/logoutadmin" } },
                         [_vm._v("Logout")]
                       )
                     ],
