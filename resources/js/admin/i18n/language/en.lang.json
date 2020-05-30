@@ -1,0 +1,145 @@
+{
+    "main": {
+        "welcome": "welcome zubaer",
+        "english": "English",
+        "arabic": "Arabic",
+        "login": "Login",
+        "imageupload": "Image Uploader"
+    },
+    "leftbar": {
+        "dashboard": "Dashboard",
+        "overview": "Overview",
+        "today": "Today",
+        "user": "User",
+        "userlist": "User List",
+        "vendor": "Vendor",
+        "lead": "Lead",
+        "setting": "Setting",
+        "voucher": "Voucher",
+
+        "profile": "Profile",
+        "shop": "Shop",
+        "product": "Product",
+        "category": "Category",
+        "branch": "Branch",
+        "page": "Page Setting",
+        "report": "Report",
+        "order": "Order",
+        "tablebooking": "Table Booking",
+        "messbooking": "Mess Booking",
+        "classified": "Classified",
+        "attribute": "Attribute",
+        "publish": "Publish",
+        "group": "Group"
+    },
+    "dashboard": {
+        "vendortoday": "Today's Vendor",
+        "view": "Today's View",
+        "totalview": "Total View",
+        "pendingvendor": "Pending Vendors",
+        "deliverorder": "Total Delivered",
+        "vendorcategory": "Vendor Category",
+        "todayview": "Today's View",
+        "weekview": "This Week View",
+        "todaylead": "Today's Lead",
+        "vendor": "Total Vendor",
+        "newcustomer": "New User"
+    },
+    "vendor": {
+        "title": "Vendor",
+        "pending": "Pending List",
+        "list": "Vendor List",
+        "add": "Add Vendor",
+        "edit": "Edit",
+        "category": "Vendor Category",
+        "branch": "Branch"
+    },
+    "product": {
+        "title": "Product",
+        "list": "Product List",
+        "add": "Add Product",
+        "general": "General",
+        "link": "Links",
+        "media": "Media",
+        "pricing": "Product Pricing",
+        "cuisinelist": "Cuisine List",
+        "ingredientlist": "Ingredient List",
+        "taglist": "Tag List",
+        "seo": "SEO"
+    },
+    "user": {
+        "title": "User",
+        "list": "User List",
+        "deliveryagent": "Delivery Agent List",
+        "customerlist": "Customer List",
+        "profile": "Profile"
+    },
+    "page": {
+        "about": "About Us",
+        "privacy": "Privacy & Policy",
+        "termsandcondition": "Terms & Conditions",
+        "customerlist": "Customer List"
+    },
+    "voucher": {
+        "list": "Voucher List",
+        "add": "Add Voucher",
+        "termsandcondition": "Terms & Conditions",
+        "customerlist": "Customer List"
+    },
+    "lead": {
+        "list": "Lead List",
+        "add": "Add Lead"
+    },
+    "report": {
+        "order": "Order",
+        "earning": "Earning",
+        "commission": "Commission",
+        "activitylog": "Activity Log",
+        "add": "Add Voucher",
+        "termsandcondition": "Terms & Conditions",
+        "customerlist": "Customer List"
+    },
+    "order": {
+        "title": "Order",
+        "list": "Order List",
+        "pending": "Pending List",
+        "add": "Add Order",
+        "selected": "Selected Item",
+        "orderstatus": "Order Status",
+        "products": "Products",
+        "customerlist": "Customer List",
+        "review": "Review & Rating",
+        "customer": "Customer"
+    },
+    "earning":{
+        "earning": "Today's Earning",
+        "totalearning": "Total Earning",
+        "pendingearning": "Pending Earning",
+        "deliverearning": "Total Delivered"
+       
+    },
+    "commission":{
+        "commission": "Today's Commission",
+        "totalcommission": "Total Commission",
+        "pendingcommission": "Pending Commission",
+        "delivercommission": "Total Delivered"
+    },
+    "activitylog":{
+        "activitylog":"activty"
+    },
+    "tablebooking":{
+        "booktable":"Book a Table",
+        "titlelist":"Table booking List"
+    },
+    "messbooking":{
+        "bookmess":"Book a Mess",
+        "titlelist":"Mess booking List"
+    },
+    "classified":{
+        "attributelist":"Attribute List",
+        "addattribute":"Add Attribute",
+        "titlelist":"Mess booking List"
+    }
+
+
+} 
