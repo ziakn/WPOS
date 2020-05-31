@@ -16,7 +16,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('admindashboard', function () {
+    return view('admin.admin');
+});
 
+Route::get('/app', function () {
+    return view('app.app');
+});
 
 
 Route::get('/logoutuser', 'UserController@logout');
@@ -36,15 +42,6 @@ Route::POST('admin-password/email','Admin\ForgotPasswordController@sendResetLink
 Route::GET('admin-password/reset','Admin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
 Route::POST('admin-password/reset','Admin\ResetPasswordController@reset');
 Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
-
-
-Route::get('admin/dashboard', function () {
-    return view('admin.admin');
-});
-
-Route::get('/app', function () {
-    return view('app.app');
-});
 
 
 
@@ -74,3 +71,21 @@ Route::group(['as' => 'frontend.'], function() {
     Route::get('/about', 'Frontend\FrontendController@about')
         ->name('about');
 });
+
+
+
+
+Route::any('/{slug}/{child}', [
+    'uses' => 'HomeController@admindashboard',
+ ]);
+Route::any('/{slug}/{child}/{sub}', [
+    'uses' => 'HomeController@admindashboard',
+ ]);
+Route::any('/{slug}/{child}/{sub}/{id}', [
+    'uses' => 'HomeController@admindashboard',
+ ]);
+
+
+// Route::get('/{any}', 'HomeController@index');
+// Route::get('/{any}/{slug}', 'HomeController@index');
+// Route::get('/{any}/{slug}/{id}', 'HomeController@index');

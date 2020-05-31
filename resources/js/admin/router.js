@@ -29,7 +29,7 @@ export default new Router({
     mode: "history",
     routes: [ 
         {
-            path: '/dashboard',
+            path: '/admindashboard/',
             component: dashboard,
             meta: {
                 title: 'Dashboard',
@@ -46,7 +46,7 @@ export default new Router({
             ]
         },
         {
-            path: '/dashboard/user',
+            path: '/admindashboard/user',
             component: user,
             meta: {
                 title: 'User',
@@ -85,7 +85,7 @@ export default new Router({
             ]
         },
         {
-            path: '/dashboard/profile',
+            path: '/admindashboard/profile',
             name: 'Profile',
             component: profile,
             meta: {
@@ -102,7 +102,7 @@ export default new Router({
                 }
         },
         {
-            path: '/dashboard/task',
+            path: '/admindashboard/task',
             component: task,
             meta: {
                 title: 'task',
@@ -141,7 +141,7 @@ export default new Router({
         
 
         {
-            path: '/dashboard/document',
+            path: '/admindashboard/document',
             component: document,
             meta: {
                 title: 'Docuemnt',

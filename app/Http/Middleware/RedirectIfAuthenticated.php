@@ -22,7 +22,7 @@ class RedirectIfAuthenticated
         {
             case 'admin':
                 if (Auth::guard($guard)->check()) {
-                    return redirect('admin/dashboard');
+                    return redirect('admindashboard');
                 }
             break;
             

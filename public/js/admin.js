@@ -2162,70 +2162,52 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         children: [{
           text: "User List",
           link: "user/list"
-        }, {
-          text: "User Password",
-          link: "user/password"
-        }, {
-          text: "Assign Machine",
-          link: "user/assignmachine"
-        }, {
-          text: "Permission",
-          link: "user/permission"
-        }]
+        } // { text: "User Password", link: "user/password" , },
+        // { text: "Assign Machine", link: "user/assignmachine" , },
+        //  { text: "Permission", link: "user/permission" , },
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "home_work",
         text: "Subscriptions",
         model: false,
-        children: [{
-          text: "Machine List",
-          link: "task/list"
-        }]
+        children: [// { text: "Machine List", link: "task/list" , },
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "emoji_people",
         text: "Teams",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "offline_bolt",
         text: "Plans",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "question_answer",
         text: "FAQs",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "supervisor_account",
         text: "Admin",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "attach_money",
         text: "Currencies",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "settings_applications",
@@ -2243,40 +2225,25 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     this.initialize();
   },
   methods: {
-    initialize: function initialize() {
-      var _this = this;
+    initialize: function initialize() {// try 
+      // {
+      //   let { data } = await axios({
+      //     method: "get",
+      //     url: "/app/getuserpages/"+this.userType
+      //   });
+      //   this.dataUser = data;
+      // } catch (e) {}
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _yield$axios, data;
-
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.prev = 0;
-                _context.next = 3;
-                return axios({
-                  method: "get",
-                  url: "/app/getuserpages/" + _this.userType
-                });
-
-              case 3:
-                _yield$axios = _context.sent;
-                data = _yield$axios.data;
-                _this.dataUser = data;
-                _context.next = 10;
-                break;
-
-              case 8:
-                _context.prev = 8;
-                _context.t0 = _context["catch"](0);
-
-              case 10:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[0, 8]]);
+        }, _callee);
       }))();
     },
     handleGoToMenu: function handleGoToMenu(d) {
@@ -20597,7 +20564,7 @@ var render = function() {
                                 key: i,
                                 attrs: {
                                   to: _vm.handleGoToMenu(
-                                    "/dashboard/" + child.link
+                                    "/admindashboard/" + child.link
                                   ),
                                   "active-class": "deep-purple white--text"
                                 }
@@ -32084,7 +32051,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: "history",
   routes: [{
-    path: '/dashboard',
+    path: '/admindashboard/',
     component: _components_dashboard_overview_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     meta: {
       title: 'Dashboard'
@@ -32098,7 +32065,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       }
     }]
   }, {
-    path: '/dashboard/user',
+    path: '/admindashboard/user',
     component: _components_dashboard_user_Home_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     meta: {
       title: 'User'
@@ -32133,7 +32100,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       }
     }]
   }, {
-    path: '/dashboard/profile',
+    path: '/admindashboard/profile',
     name: 'Profile',
     component: _components_dashboard_profile_Profile_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
     meta: {
@@ -32147,7 +32114,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       title: 'pages'
     }
   }, {
-    path: '/dashboard/task',
+    path: '/admindashboard/task',
     component: _components_dashboard_task_Home_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     meta: {
       title: 'task'
@@ -32178,7 +32145,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       }
     }]
   }, {
-    path: '/dashboard/document',
+    path: '/admindashboard/document',
     component: _components_dashboard_document_Home_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
     meta: {
       title: 'Docuemnt'

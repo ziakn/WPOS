@@ -36,7 +36,7 @@
             <v-list-item
               v-for="(child, i) in item.children"
               :key="i"
-              :to="handleGoToMenu('/dashboard/'+child.link)"
+              :to="handleGoToMenu('/admindashboard/'+child.link)"
                  v-show="showChild(child)"
               active-class="deep-purple white--text"
             >
@@ -97,9 +97,9 @@ export default {
         model: false,
         children: [
           { text: "User List", link: "user/list" ,  },
-          { text: "User Password", link: "user/password" , },
-          { text: "Assign Machine", link: "user/assignmachine" , },
-           { text: "Permission", link: "user/permission" , },
+          // { text: "User Password", link: "user/password" , },
+          // { text: "Assign Machine", link: "user/assignmachine" , },
+          //  { text: "Permission", link: "user/permission" , },
         ]
       },
       {
@@ -108,7 +108,7 @@ export default {
         text: "Subscriptions",
         model: false,
         children: [
-          { text: "Machine List", link: "task/list" , },
+          // { text: "Machine List", link: "task/list" , },
         ]
       },
        
@@ -118,7 +118,7 @@ export default {
         text: "Teams",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -127,7 +127,7 @@ export default {
         text: "Plans",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -136,7 +136,7 @@ export default {
         text: "FAQs",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -145,7 +145,7 @@ export default {
         text: "Admin",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -154,7 +154,7 @@ export default {
         text: "Currencies",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
       
@@ -181,15 +181,15 @@ export default {
   {
 
     async initialize() {
-      try 
-      {
-        let { data } = await axios({
-          method: "get",
-          url: "/app/getuserpages/"+this.userType
-        });
-        this.dataUser = data;
+      // try 
+      // {
+      //   let { data } = await axios({
+      //     method: "get",
+      //     url: "/app/getuserpages/"+this.userType
+      //   });
+      //   this.dataUser = data;
        
-      } catch (e) {}
+      // } catch (e) {}
 
     },
     handleGoToMenu(d) 
