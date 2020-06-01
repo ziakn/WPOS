@@ -2165,128 +2165,98 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         "icon-alt": "face",
         text: "Contacts",
         model: false,
-        children: [{
-          text: "User List",
-          link: "user/list"
-        }, {
-          text: "User Password",
-          link: "user/password"
-        }, {
-          text: "Assign Machine",
-          link: "user/assignmachine"
-        }, {
-          text: "Permission",
-          link: "user/permission"
-        }]
+        children: [// { text: "User List", link: "user/list" ,  },
+          // { text: "User Password", link: "user/password" , },
+          // { text: "Assign Machine", link: "user/assignmachine" , },
+          //  { text: "Permission", link: "user/permission" , },
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "home_work",
         text: "Items",
         model: false,
-        children: [{
-          text: "Machine List",
-          link: "task/list"
-        }]
+        children: [// { text: "Machine List", link: "task/list" , },
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "receipt",
         text: "Qoutations",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "receipt",
         text: "Invoices",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "restore",
         text: "Recurring Invoices",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "attach_money",
         text: "Payments",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "minimize",
         text: "Refunds",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "pets",
         text: "Vendors",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "reorder",
         text: "Purchase Orders",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "shopping_basket",
         text: "Payment Made",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "attach_money",
         text: "Expenses",
         model: false,
-        children: [{
-          text: "Add Doc",
-          link: "document/add"
-        }]
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
       }, {
         icon: "keyboard_arrow_down",
         "icon-alt": "receipt",
         text: "Exports",
         model: false,
+        children: [// { text: "Add Doc", link: "document/add" ,  },  
+        ]
+      }, {
+        icon: "keyboard_arrow_down",
+        "icon-alt": "settings_applications",
+        text: "Setting",
+        model: false,
         children: [{
-          text: "Add Doc",
-          link: "document/add"
+          text: "Profile",
+          link: "profile"
         }]
-      } // {
-      //   icon: "keyboard_arrow_down",
-      //   "icon-alt": "settings_applications",
-      //   text: "Setting",
-      //   model: false,
-      //   children: [
-      //     { text: "Profile", link: "profile" , },
-      //   ]
-      // },
-      ]
+      }]
     };
   },
   created: function created() {

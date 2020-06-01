@@ -90,6 +90,7 @@
 
                             <div class="col-md-6">
                                 <select id="plan" type="text" class="form-control{{ $errors->has('plan') ? ' is-invalid' : '' }}" name="plan" required>
+                                    <option value="">comming soon</option>
                                     {{-- @foreach(Meridian::plans() as $plan)
                                         <option value="{{$plan->id}}"
                                             {{request('plan_id') && request('plan_id') == $plan->id ? 'selected' : ''}}>
@@ -134,7 +135,7 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button  type="submit" class="btn btn-primary">
+                                <button  class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>

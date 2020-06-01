@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('admindashboard', function () {
+Route::get('/admindashboard', function () {
     return view('admin.admin');
 });
+
+
 
 Route::get('/app', function () {
     return view('app.app');
@@ -74,16 +76,12 @@ Route::group(['as' => 'frontend.'], function() {
 
 
 
-
-Route::any('/{slug}/{child}', [
-    'uses' => 'HomeController@admindashboard',
- ]);
-Route::any('/{slug}/{child}/{sub}', [
-    'uses' => 'HomeController@admindashboard',
- ]);
-Route::any('/{slug}/{child}/{sub}/{id}', [
-    'uses' => 'HomeController@admindashboard',
- ]);
+Route::get('/admindashboard/{slug}', function () {
+    return view('admin.admin');
+});
+Route::get('/admindashboard/{slug}/{sub}', function () {
+    return view('admin.admin');
+});
 
 
 // Route::get('/{any}', 'HomeController@index');

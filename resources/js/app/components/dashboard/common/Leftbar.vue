@@ -96,10 +96,10 @@ export default {
         text: "Contacts",
         model: false,
         children: [
-          { text: "User List", link: "user/list" ,  },
-          { text: "User Password", link: "user/password" , },
-          { text: "Assign Machine", link: "user/assignmachine" , },
-           { text: "Permission", link: "user/permission" , },
+          // { text: "User List", link: "user/list" ,  },
+          // { text: "User Password", link: "user/password" , },
+          // { text: "Assign Machine", link: "user/assignmachine" , },
+          //  { text: "Permission", link: "user/permission" , },
         ]
       },
       {
@@ -108,7 +108,7 @@ export default {
         text: "Items",
         model: false,
         children: [
-          { text: "Machine List", link: "task/list" , },
+          // { text: "Machine List", link: "task/list" , },
         ]
       },
        
@@ -118,7 +118,7 @@ export default {
         text: "Qoutations",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -127,7 +127,7 @@ export default {
         text: "Invoices",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -136,7 +136,7 @@ export default {
         text: "Recurring Invoices",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -145,7 +145,7 @@ export default {
         text: "Payments",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -154,7 +154,7 @@ export default {
         text: "Refunds",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -163,7 +163,7 @@ export default {
         text: "Vendors",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -172,7 +172,7 @@ export default {
         text: "Purchase Orders",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -181,7 +181,7 @@ export default {
         text: "Payment Made",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
        {
@@ -190,7 +190,7 @@ export default {
         text: "Expenses",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
       {
@@ -199,19 +199,19 @@ export default {
         text: "Exports",
         model: false,
         children: [
-          { text: "Add Doc", link: "document/add" ,  },  
+          // { text: "Add Doc", link: "document/add" ,  },  
         ]
       },
-      // {
-      //   icon: "keyboard_arrow_down",
-      //   "icon-alt": "settings_applications",
-      //   text: "Setting",
-      //   model: false,
-      //   children: [
-      //     { text: "Profile", link: "profile" , },
+      {
+        icon: "keyboard_arrow_down",
+        "icon-alt": "settings_applications",
+        text: "Setting",
+        model: false,
+        children: [
+          { text: "Profile", link: "profile" , },
          
-      //   ]
-      // },
+        ]
+      },
 
     ]
   }),

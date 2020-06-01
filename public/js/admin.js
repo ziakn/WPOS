@@ -6526,7 +6526,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       text: "Admin",
       value: 2
     }, {
-      text: "Machine",
+      text: "User",
       value: 3
     }]), _defineProperty(_ref, "defaultItem", {
       name: "",

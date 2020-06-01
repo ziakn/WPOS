@@ -161,7 +161,7 @@ export default {
     },
      userTypeList:[
          { text: "Admin", value: 2 },
-        { text: "Machine", value: 3 },
+        { text: "User", value: 3 },
       ],
     defaultItem: {
       name: "",
