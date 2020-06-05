@@ -196,7 +196,7 @@ export default {
       try {
         let { data } = await axios({
           method: "post",
-          url: "/app/updateUser",
+          url: "/appadmin/updateUser",
           data: this.dataList
         });
         this.snacks("Successfully Done", "green");
@@ -214,7 +214,7 @@ export default {
       try {
         let { data } = await axios({
           method: "post",
-          url: "/app/changepassword",
+          url: "/appadmin/changepassword",
           data: this.password
         });
 
@@ -239,7 +239,7 @@ export default {
       try {
         let { data } = await axios({
           method: "get",
-          url: "/app/profile/"
+          url: "/appadmin/profile/"
         });
         this.dataList = data;
       } catch (e) {
@@ -258,7 +258,7 @@ export default {
       try {
         let { data } = await axios({
           method: "post",
-          url: "/app/avatar",
+          url: "/appadmin/avatar",
           data: formData
         });
         this.dataList.image = data.data;

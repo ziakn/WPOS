@@ -4,6 +4,8 @@ import dashboard from './components/dashboard/overview/Home.vue'
 import task from './components/dashboard/task/Home.vue'
 import user from './components/dashboard/user/Home.vue'
 import document from './components/dashboard/document/Home.vue'
+import faq from './components/dashboard/faq/Home.vue'
+import admin from './components/dashboard/admin/Home.vue'
 
 
 import userlist from './components/dashboard/user/List.vue'
@@ -14,6 +16,8 @@ import permission from './components/dashboard/profile/Permission.vue'
 import pages from './components/dashboard/profile/Pages.vue'
 import documentadd from './components/dashboard/document/Add.vue'
 
+import faqlist from './components/dashboard/faq/List.vue'
+import adminlist from './components/dashboard/admin/List.vue'
 
 import tasklist from './components/dashboard/task/List.vue'
 import taskadd from './components/dashboard/task/Add.vue'
@@ -141,17 +145,17 @@ export default new Router({
         
 
         {
-            path: '/admindashboard/document',
-            component: document,
+            path: '/admindashboard/faq',
+            component: faq,
             meta: {
-                title: 'Docuemnt',
+                title: 'Faq',
             },
             children: [
                 {
-                    path: 'add',
-                    component: documentadd,
+                    path: 'list',
+                    component: faqlist,
                     meta: {
-                        title: 'Document',
+                        title: 'Faq',
                     }
                 },
               
@@ -159,6 +163,24 @@ export default new Router({
             ]
         },
 
+        {
+            path: '/admindashboard/admin',
+            component: admin,
+            meta: {
+                title: 'Admin',
+            },
+            children: [
+                {
+                    path: 'list',
+                    component: adminlist,
+                    meta: {
+                        title: 'Admin',
+                    }
+                },
+              
+              
+            ]
+        },
     
 
     

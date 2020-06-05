@@ -28,8 +28,8 @@
             window.Laravel = {
                 csrfToken: '{{ csrf_token() }}'
             };
-            @if(Auth::check())
-                window.authUser={!! Auth::user() !!}
+            @if(Auth::guard('admin')->check())
+                window.authUser={!! Auth::guard('admin')->user() !!}
             @else
                 window.authUser=false
              @endif

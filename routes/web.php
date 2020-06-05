@@ -31,7 +31,7 @@ Route::get('/logoutuser', 'UserController@logout');
 
 Route::get('/logoutadmin', 'Admin\UserController@logout');
 
-Auth::routes();
+
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
@@ -45,9 +45,21 @@ Route::GET('admin-password/reset','Admin\ForgotPasswordController@showLinkReques
 Route::POST('admin-password/reset','Admin\ResetPasswordController@reset');
 Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
 
+Auth::routes();
+Route::prefix('/appadmin')->group(function () {
+    Route::resource('/faq', 'Admin\FaqController');
+    Route::resource('/createadmin', 'Admin\CreateAdminController');
+ 
+});
 
-
-
+//Admin
+Route::post('/appadmin/createadminupdatepassword', 'Admin\CreateAdminController@updatepassword');
+//Admin setting
+Route::post('/appadmin/updateUser','Admin\UserController@updateUser');
+Route::get('/appadmin/profile', 'Admin\UserController@profile');
+Route::post('/appadmin/changepassword', 'Admin\UserController@changePass');
+Route::post('/appadmin/updatepassword', 'Admin\UserController@updatepassword');
+Route::post('/appadmin/avatar','Admin\UserController@avatar');
 
 
 Route::group(['as' => 'frontend.'], function() {

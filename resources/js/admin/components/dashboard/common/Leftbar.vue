@@ -136,7 +136,7 @@ export default {
         text: "FAQs",
         model: false,
         children: [
-          // { text: "Add Doc", link: "document/add" ,  },  
+          { text: "List", link: "faq/list"},  
         ]
       },
        {
@@ -145,7 +145,7 @@ export default {
         text: "Admin",
         model: false,
         children: [
-          // { text: "Add Doc", link: "document/add" ,  },  
+          { text: "List", link: "admin/list"   },  
         ]
       },
        {

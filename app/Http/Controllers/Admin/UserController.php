@@ -7,93 +7,27 @@ use Illuminate\Http\Request;
 use App\Rules\MatchOldPassword;
 use Illuminate\Support\Facades\Hash;
 use App\User;
+use App\Admin;
 use Mail;
 use Auth;
 use Session;
 use Redirect;
 use Image;
-use App\Pages;
 use DB;
+use URL;
 class UserController extends Controller
 {
     
     
     public function index()
    {
-       $auth=Auth::user();
        
-       if($auth->userType==1)
-       {
-            $data=User::where('userType','!=', 1)
-            ->get();
-       }
-       elseif($auth->userType==2)
-       {
-            $bde_Data=User::where('parent_id',$auth->id)
-            ->where('userType',3)
-            ->get();
-            $bde_id=array();
-            foreach($bde_Data as $item)
-            {
-                array_push($bde_id,$item['id']);
-            }
-            $authid=$auth->id;
-            $data=User::with('user_type')
-            ->where(function ($query) use($authid,$bde_id){
-                $query->where('parent_id',$authid)
-                ->orwherein('parent_id',$bde_id);
-            })
-            ->get();
-       
-       }
-       else
-       {
-            $data=User::with('user_type')
-            ->where('parent_id',$auth->id)
-            ->get();
-       }
-
-       return $data;
    }
 
    public function store(Request $request)
    {
-        $auth=Auth::user();
-        $response=array();
-        $response['status']=false;
-        $response['data'] ='';
-        DB::beginTransaction();
-        try {
-        $user=new User;
-        $user->parent_id=$auth->id;
-        $user->name=$request->input('name');
-        $user->email=$request->input('email');
-        $user->userType=$request->input('userType');
-        $user->password=bcrypt($request->input('password'));
-        $user->save();
-
-        // $data['password'] =$request->password;
-        // $data['email'] =$request->email;
-        // Mail::send('mailview', $data, function($message) use ($request) {
-        //     $message->to( $request->email , $request->name )
-        //     ->subject('Password for SimplistiQ Login');
-        // });
-        Pages::create(
-            [
-                'user_role'=> $user->id,
-            ]
-        );
-        $response['data']=User::select('id','name','email','name','userType')
-        ->find($user->id);
-        DB::commit();
-        $response['status'] = true;
-    }
-    catch (\Exception $e) {
-        $response['data']=$e->getMessage();
-        $response['status'] = false;
-        DB::rollback();
-    }
-    return response()->json($response);
+       
+   
    }
 
    public function update(Request $request, $id)
@@ -127,7 +61,7 @@ return response()->json($response);
     {
         $response=array();
         $response['status']=false;
-        $response['data']  = User::find($id);
+        $response['data']  = Admin::find($id);
         if($response['data'])
         {
                 $response['data']=$response['data']->delete();
@@ -151,7 +85,8 @@ return response()->json($response);
 
     public function profile()
     {
-        $data=Auth::user();
+       
+        $data=Auth::guard('admin')->user();
         return $data;
     }
 
@@ -163,7 +98,7 @@ return response()->json($response);
             'newPassword' => ['required'],
             'confirmPassword' => ['same:newPassword'],
         ]);
-        if(!Hash::check($request->oldPassword,Auth::user()->password))
+        if(!Hash::check($request->oldPassword,Auth::guard('admin')->user()->password))
         {
             return response()->json(
                 [
@@ -173,7 +108,7 @@ return response()->json($response);
         }
         else
         {                     
-            $update=User::find(auth()->user()->id)->update(['password'=> Hash::make($request->newPassword)]);  
+            $update=Admin::find(Auth::guard('admin')->user()->id)->update(['password'=> Hash::make($request->newPassword)]);  
             if($update)   
             {
                 return response()->json(
@@ -196,7 +131,7 @@ return response()->json($response);
 
     public function updateUser(Request $request)
     {
-        $update=User::where('id',$request->id)->update(
+        $update=Admin::where('id',$request->id)->update(
             [
                 'name' => $request->name
             ]);
@@ -205,7 +140,7 @@ return response()->json($response);
 
     public function updatepassword(Request $request)
    {
-        $update=User::where('id',$request->id)->update(
+        $update=Admin::where('id',$request->id)->update(
            [
                'password'=>bcrypt($request->password),
            ]
@@ -221,14 +156,14 @@ return response()->json($response);
 
    public function avatar(Request $request)
    {
-       $user_id = Auth::id();
+       $user_id = Auth::guard('admin')->user()->id;
        //return $request->all();
        $request->file('myFile')->store('public/uploads/avatar');
        $pic= '/storage/uploads/avatar/'.$request->myFile->hashName();   
        Image::make('storage/uploads/avatar/'.$request->myFile->hashName())->fit(600, 400, function($constraint) {
         $constraint->aspectRatio();})->save('storage/uploads/avatar/'.$request->myFile->hashName());              
-       $update=User::where('id', $user_id)->update([
-           'image' => $pic
+       $update=Admin::where('id', $user_id)->update([
+           'image' => URL::to('/'). $pic
        ]);
        if($update)
        {
